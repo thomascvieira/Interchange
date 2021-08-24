@@ -1,7 +1,20 @@
-let stylesheet = new CSSStyleSheet();
+let styleSettings = new CSSStyleSheet();
+(function applySettings(styleSettings){
+	setAccentColor();
+	setLinkSize();
+})()
+
 function setAccentColor(){
-	newAccentColor = 'blue';
-	// stylesheet.deleteRule(79);
-	stylesheet.insertRule('a:hover{ color: ' + newAccentColor + ';', 0);
+	let newAccentColor = 'yellow';
+	styleSettings.insertRule('a:hover{ color: ' + newAccentColor + ';}');
+	saveChange(styleSettings);
 }
-setAccentColor();
+function setLinkSize(){
+	let newLinkSize = '24px';
+	styleSettings.insertRule('li{ font-size: ' + newLinkSize + ';}');
+	saveChange(styleSettings);
+}
+
+function saveChange(styleSettings){
+	document.adoptedStyleSheets = [styleSettings];
+}
