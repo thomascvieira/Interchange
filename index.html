@@ -7,7 +7,6 @@
 <body>
 
 <div class="wrapper">
-
 <div class="content">
 
 <div class="row" id="top">
@@ -18,7 +17,7 @@
 	<div class="searchBar-contain">
 		<input type="text" id="searchBar" placeholder="Search...">
 		<i data-feather="arrow-right" id="searchBtn"></i>
-		<select id="engine" onchange="setEngine(this.value)">
+		<select id="engine" onchange="engineChange(this.value)">
 			<option value="0">DuckDuckGo</option>
 			<option value="1">Google</option>
 			<option value="2">Youtube</option>
@@ -28,7 +27,7 @@
 </div><!-- row -->
 
 <div class="row" id="bottom">
-	<div class="column">
+		<div class="column">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
 	</div><!-- column -->
 	<div class="column">
@@ -48,15 +47,16 @@
 </div><!-- row -->
 	
 </div><!-- content -->
-	
 </div><!-- wrapper -->
 
-
+<!-- default stylesheet and scripts -->
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>feather.replace()</script>
 <script src="assets/js/time.js"></script>
 <script src="assets/js/settings.js"></script>
 <script src="assets/js/search.js"></script>
+
 </body>
 </html>

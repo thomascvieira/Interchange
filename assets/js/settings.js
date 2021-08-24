@@ -4,8 +4,18 @@ let styleSettings = new CSSStyleSheet();
 	setLinkSize();
 })()
 
+// ~~~~~~ page structure ~~~~~~
+function addColumn(){
+	var div = document.createElement('div');
+	div.classList.add('column');
+	document.getElementById("bottom").appendChild(div);
+}
+function removeColumn(){
+	$(".column:last-child").remove();
+}
+
 function setAccentColor(){
-	let newAccentColor = 'yellow';
+	let newAccentColor = 'red';
 	styleSettings.insertRule('a:hover{ color: ' + newAccentColor + ';}');
 	saveChange(styleSettings);
 }
