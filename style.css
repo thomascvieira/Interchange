@@ -64,3 +64,18 @@ body{
 	width: 500px;
 	padding: 10px;
 }
+ul{
+	text-align: center;
+	list-style-type: none;
+}
+li{
+}
+a{
+	text-decoration: none;
+}
+a:visited{
+	color: #F0F0F0;
+}
+a:hover{ color: red;
+	transition: 0.5s;
+}
