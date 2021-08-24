@@ -1,0 +1,66 @@
+/*black - #0F0F0F;
+white - #F0F0F0;*/
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Century Gothic', sans-serif;
+	color: #F0F0F0;
+}
+body{
+	position: relative;
+	min-height: 100%;
+	background-color: #0F0F0F;
+}
+.wrapper{
+	display: grid;
+	width: 100%; /*width viewport adj*/
+	height: 100vh;
+	margin: 0 auto;
+}
+.content{
+	display: grid;
+	grid-row-gap: 5%;
+	height: 80vh; /*height viewport adj*/
+	align-self: center;
+}
+.row{	
+	display: grid;
+	grid-column-gap: 2%;
+	align-items: center;
+	grid-auto-flow: row;
+	/*background-color: red;*/
+}
+.row#bottom{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.column{
+	height: 100%;
+	width: 90%;
+	justify-self: center;
+	border: 3px solid #F0F0F0;
+	border-radius: 30px;
+	/*background-color: blue;*/
+}
+.currentDay{
+	margin: 0 auto;
+}
+#clock{
+	font-size: 96px;
+}
+#date{
+	text-align: center;
+	font-size: 24px;
+}
+.searchBar-contain{
+	margin: 0 auto;
+	justify-self: top;
+}
+#searchBar{
+	background-color: #0F0F0F;
+	border: 3px solid #F0F0F0;
+	border-radius: 30px;
+	font-size: 18px;
+	width: 500px;
+	padding: 10px;
+}
