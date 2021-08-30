@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>New Tab - Interchange</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -55,14 +56,55 @@
 </div><!-- wrapper -->
 
 <div id="settings">
-	<div class="settings-wrapper">
-	<h1>Settings</h1>
-	<i data-feather="x" onclick="toggleSettings()"></i>
+<div class="settings-wrapper">
+	<div class="settings-nav">
+		<h2>Settings</h2>
+		<div class="nav-section">
+			<a href="#general"><p>General</p></a>
+		</div>
+		<div class="nav-section">
+			<a href="#general"><p>General</p></a>
+		</div>
+		<div class="nav-section">
+			<a href="#general"><p>General</p></a>
+		</div>
+		<div class="nav-section">
+			<a href="#general"><p>General</p></a>
+		</div>
+		<i data-feather="x" onclick="toggleSettings()" id="close-settings"></i>	
 	</div>
+
+	<div class="settings-content">
+		<h2>Page Structure</h2>
+		<h3>Add/Remove Columns</h3>
+		<button onclick="addColumn()">Add Column</button>
+		<button onclick="removeColumn()">Remove Column</button>
+
+		<h2>Colors and Fonts</h2>
+		<h3>Colors</h3>
+		<p>Enter colors in Hex format (example - #0F0F0F)</p>
+		<div class="setting">
+			<label for="background-color">Set Background Color - </label>
+			<input type="text" name="background-color" id="background-color" onchange="populateStorage();setBackgroundColor();">
+		</div>
+		<div class="setting">
+			<label for="element-color">Set Elements Color - </label>
+			<input type="text" name="element-color" id="element-color" onchange="setElementColor()">
+		</div>
+		<div class="setting">
+			<label for="accent-color">Set Accent Color - </label>
+			<input type="text" name="accent-color" id="accent-color" onchange="setAccentColor()">
+		</div>
+		<div class="setting">
+			<label for="clear-storage">Clear Saved Values - </label>
+			<button onclick="clearSavedValues()">Clear</button>
+		</div>
+	</div>
+
+</div>
 </div>
 
 <!-- default stylesheet and scripts -->
-<link rel="stylesheet" type="text/css" href="style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>feather.replace()</script>
