@@ -14,12 +14,13 @@ body{
 }
 .wrapper{
 	display: grid;
-	width: 100%; /*width viewport adj*/
+	width: 90%; /*width viewport adj*/
 	height: 100vh;
 	margin: 0 auto;
 }
 .content{
 	display: grid;
+	grid-template-rows: auto 1fr 1fr;
 	grid-row-gap: 5%;
 	height: 80vh; /*height viewport adj*/
 	align-self: center;
@@ -29,18 +30,21 @@ body{
 	grid-column-gap: 2%;
 	align-items: center;
 	grid-auto-flow: row;
-	/*background-color: red;*/
 }
 .row#bottom{
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .column{
 	height: 100%;
-	width: 90%;
-	justify-self: center;
+	width: 100%;
 	border: 3px solid #F0F0F0;
 	border-radius: 30px;
-	/*background-color: blue;*/
+}
+#settings-row {
+	height: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .currentDay{
 	margin: 0 auto;
@@ -64,11 +68,23 @@ body{
 	width: 500px;
 	padding: 10px;
 }
+.column-head{
+	margin:  50px auto 0px;
+	text-align: center;
+	align-self: start;
+	font-weight: normal;
+
+}
+.column p, .column ul{
+	width: 95%;
+	margin: 50px auto;
+}
 ul{
 	text-align: center;
 	list-style-type: none;
 }
-li{
+.column li{
+	margin: 25px 0px;
 }
 a{
 	text-decoration: none;
@@ -92,4 +108,15 @@ select{
 	border: 3px solid #F0F0F0;
 	border-radius: 30px;
 	padding: 5px;
+}
+#settings{
+	display: none;
+	height: 100vh;
+	width: 100%;
+	background-color: #0F0F0F;
+	z-index: 10000;
+}
+.settings-wrapper{
+	width: 90%;
+	margin: 0 auto;
 }

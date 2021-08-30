@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<div class="wrapper">
+<div class="wrapper" id="wrapper-main">
 <div class="content">
-
+<div id="settings-row"><i data-feather="settings" id="settingsIcon" onclick="toggleSettings()"></i><i data-feather="toggle-left"></i></div>
 <div class="row" id="top">
 	<div class="currentDay">
 		<p id="clock"></p>
@@ -27,10 +27,12 @@
 </div><!-- row -->
 
 <div class="row" id="bottom">
-		<div class="column">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.
+	<div class="column">
+		<h2 class="column-head">Column 1</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
 	</div><!-- column -->
 	<div class="column">
+		<h2 class="column-head">Column 1</h2>
 		<ul>
 			<li><a href="index.html">Link 1</a></li>
 			<li><a href="index.html">Link 2</a></li>
@@ -39,15 +41,25 @@
 		</ul>
 	</div><!-- column -->
 	<div class="column">
+		<h2 class="column-head">Column 1</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
 	</div><!-- column -->
 	<div class="column">
+		<h2 class="column-head">Column 1</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad.</p>
 	</div><!-- column -->
 </div><!-- row -->
-	
+
 </div><!-- content -->
+
 </div><!-- wrapper -->
+
+<div id="settings">
+	<div class="settings-wrapper">
+	<h1>Settings</h1>
+	<i data-feather="x" onclick="toggleSettings()"></i>
+	</div>
+</div>
 
 <!-- default stylesheet and scripts -->
 <link rel="stylesheet" type="text/css" href="style.css">

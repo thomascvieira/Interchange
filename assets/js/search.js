@@ -6,7 +6,7 @@ function engineChange(){
 	engineInput = document.getElementById("engine").value;
 }
 
-let engineArray = ['https://duckduckgo.com/?q=', 'https://www.google.com/search?q=', 'https://www.youtube.com/results?search_query=string', 'https://stackoverflow.com/search?q='];
+let engineArray = ['https://duckduckgo.com/?q=', 'https://www.google.com/search?q=', 'https://www.youtube.com/results?search_query=', 'https://stackoverflow.com/search?q='];
 
 document.getElementById('searchBtn').addEventListener("click", runSearch);
 document.getElementById('searchBar').addEventListener("keydown", function(e){

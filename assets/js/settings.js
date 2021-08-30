@@ -4,6 +4,18 @@ let styleSettings = new CSSStyleSheet();
 	setLinkSize();
 })()
 
+function toggleSettings(){
+	var settings = document.getElementById('settings');
+	var wrapper = document.getElementById('wrapper-main')
+	if(settings.style.display === "block"){
+		settings.style.display = "none";
+		wrapper.style.display = "grid"
+	}
+	else{
+		settings.style.display = "block";
+		wrapper.style.display = "none";
+	}
+}
 // ~~~~~~ page structure ~~~~~~
 function addColumn(){
 	var div = document.createElement('div');
@@ -15,7 +27,7 @@ function removeColumn(){
 }
 
 function setAccentColor(){
-	let newAccentColor = 'red';
+	let newAccentColor = 'yellow';
 	styleSettings.insertRule('a:hover{ color: ' + newAccentColor + ';}');
 	saveChange(styleSettings);
 }
